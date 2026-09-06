@@ -6,10 +6,6 @@
     <title>C.A.R.E.S. Wiki</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -22,12 +18,12 @@
             border-bottom: 1px solid #a2a9b1;
             padding: 15px 30px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: bold;
         }
 
@@ -37,8 +33,8 @@
 
         nav a {
             margin-left: 20px;
-            text-decoration: none;
             color: #3366cc;
+            text-decoration: none;
         }
 
         nav a:hover {
@@ -46,27 +42,27 @@
         }
 
         .search {
-            text-align: center;
-            padding: 35px 20px;
             background: #eaecf0;
+            padding: 30px;
+            text-align: center;
         }
 
         .search input {
             width: 60%;
             max-width: 600px;
-            padding: 13px;
-            border: 1px solid #72777d;
+            padding: 12px;
             font-size: 16px;
+            border: 1px solid #72777d;
         }
 
-        .container {
+        main {
             max-width: 1100px;
             margin: 30px auto;
             padding: 0 25px;
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 38px;
             border-bottom: 1px solid #a2a9b1;
             padding-bottom: 10px;
         }
@@ -74,16 +70,33 @@
         h2 {
             border-bottom: 1px solid #c8ccd1;
             padding-bottom: 6px;
+            margin-top: 35px;
         }
 
-        .welcome {
+        .box {
             background: white;
             border: 1px solid #c8ccd1;
             padding: 25px;
             margin-bottom: 25px;
         }
 
-        .cards {
+        .info-box {
+            float: right;
+            width: 260px;
+            margin: 0 0 20px 25px;
+            background: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 15px;
+        }
+
+        .info-box h3 {
+            text-align: center;
+            background: #eaecf0;
+            padding: 10px;
+            margin-top: 0;
+        }
+
+        .links {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 15px;
@@ -95,13 +108,10 @@
             padding: 20px;
         }
 
-        .card h3 {
-            color: #3366cc;
-            margin-top: 0;
-        }
-
         .card a {
             color: #3366cc;
+            font-size: 19px;
+            font-weight: bold;
             text-decoration: none;
         }
 
@@ -115,7 +125,31 @@
             text-align: center;
             background: #eaecf0;
             border-top: 1px solid #a2a9b1;
-            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                display: block;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+
+            nav a {
+                margin-right: 15px;
+                margin-left: 0;
+            }
+
+            .info-box {
+                float: none;
+                width: auto;
+                margin: 20px 0;
+            }
+
+            .search input {
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -123,25 +157,48 @@
 <body>
 
 <header>
-    <div class="logo">C.A.R.E.S. <span>Wiki</span></div>
+
+    <div class="logo">
+        C.A.R.E.S. <span>Wiki</span>
+    </div>
 
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="how-it-works.html">How It Works</a>
     </nav>
+
 </header>
+
 
 <div class="search">
     <input type="text" placeholder="Search C.A.R.E.S. Wiki...">
 </div>
 
-<main class="container">
+
+<main>
 
     <h1>C.A.R.E.S.</h1>
 
-    <div class="welcome">
-        <h2>Welcome to C.A.R.E.S. Wiki</h2>
+
+    <div class="info-box">
+
+        <h3>C.A.R.E.S.</h3>
+
+        <p><strong>Full name:</strong><br>
+        Civilian Assistance & Rescue Emergency Services</p>
+
+        <p><strong>Type:</strong><br>
+        Emergency assistance concept</p>
+
+        <p><strong>Purpose:</strong><br>
+        Connecting people in need with appropriate assistance.</p>
+
+    </div>
+
+
+    <div class="box">
+
+        <h2>Overview</h2>
 
         <p>
             C.A.R.E.S. stands for
@@ -149,43 +206,225 @@
         </p>
 
         <p>
-            This website contains information about the C.A.R.E.S. emergency
-            assistance concept and how it could help connect people with
-            the assistance they need.
+            C.A.R.E.S. is an emergency assistance concept designed to
+            connect civilians who need help with the appropriate rescue
+            or response network.
         </p>
+
+        <p>
+            The system focuses on communicating two important things:
+            <strong>where help is needed</strong> and
+            <strong>what type of help is required.</strong>
+        </p>
+
     </div>
+
+
+    <h2>The Problem</h2>
+
+    <div class="box">
+
+        <p>
+            During emergencies, people may struggle to communicate
+            what kind of assistance they need and where they need it.
+        </p>
+
+        <p>
+            At the same time, rescue teams may have to deal with
+            many requests coming from different locations.
+        </p>
+
+        <p>
+            C.A.R.E.S. aims to make this connection more organized
+            by bringing emergency requests and response information
+            together in one system.
+        </p>
+
+    </div>
+
+
+    <h2>How C.A.R.E.S. Works</h2>
+
+    <div class="box">
+
+        <ol>
+
+            <li>A civilian selects <strong>"I NEED HELP."</strong></li>
+
+            <li>
+                They choose the type of assistance they need.
+            </li>
+
+            <li>
+                Their location and emergency type are sent to
+                the connected rescue network.
+            </li>
+
+            <li>
+                Rescue teams can see requests on a
+                <strong>live rescue map.</strong>
+            </li>
+
+            <li>
+                Responders can use the information to help
+                coordinate the appropriate assistance.
+            </li>
+
+        </ol>
+
+    </div>
+
+
+    <h2>Types of Assistance</h2>
+
+    <div class="box">
+
+        <ul>
+
+            <li><strong>Medical</strong> — medical assistance</li>
+
+            <li><strong>Water</strong> — access to drinking water</li>
+
+            <li><strong>Food</strong> — emergency food assistance</li>
+
+            <li><strong>Shelter</strong> — temporary shelter assistance</li>
+
+            <li><strong>Evacuation</strong> — assistance leaving an unsafe area</li>
+
+            <li><strong>Missing Family Member</strong> — reporting a missing family member</li>
+
+            <li><strong>Trapped</strong> — reporting that someone is trapped</li>
+
+        </ul>
+
+    </div>
+
+
+    <h2>The C.A.R.E.S. Rescue Map</h2>
+
+    <div class="box">
+
+        <p>
+            The rescue map is an important part of the C.A.R.E.S.
+            concept.
+        </p>
+
+        <p>
+            Emergency requests can be displayed on a map using
+            different markers for different types of assistance.
+            This can give responders a visual overview of where
+            help is being requested.
+        </p>
+
+        <p>
+            The map is currently a prototype concept for this
+            student project.
+        </p>
+
+    </div>
+
+
+    <h2>Our Mission</h2>
+
+    <div class="box">
+
+        <p>
+            <strong>
+                "WHERE HELP IS REQUIRED, C.A.R.E.S. CONNECTS."
+            </strong>
+        </p>
+
+        <p>
+            Our mission is to create a better connection between
+            people who need assistance and the response networks
+            that can help them.
+        </p>
+
+    </div>
+
+
+    <h2>Our Goal</h2>
+
+    <div class="box">
+
+        <p>
+            Our goal is simple:
+        </p>
+
+        <p>
+            <strong>
+                Connecting people in need with the right assistance,
+                at the right time.
+            </strong>
+        </p>
+
+    </div>
+
+
+    <h2>Future of C.A.R.E.S.</h2>
+
+    <div class="box">
+
+        <p>
+            C.A.R.E.S. could potentially expand to support more
+            communities, more rescue networks, and a wider range
+            of emergency situations.
+        </p>
+
+        <p>
+            The concept could also become more advanced as the
+            technology and emergency-response network develop.
+        </p>
+
+    </div>
+
 
     <h2>Explore C.A.R.E.S.</h2>
 
-    <div class="cards">
+    <div class="links">
 
         <div class="card">
-            <h3><a href="about.html">About C.A.R.E.S.</a></h3>
-            <p>Learn about the idea behind C.A.R.E.S.</p>
+            <a href="about.html">About C.A.R.E.S.</a>
+            <p>Learn more about the project.</p>
         </div>
 
         <div class="card">
-            <h3><a href="how-it-works.html">How It Works</a></h3>
-            <p>Learn how the C.A.R.E.S. system is designed to work.</p>
+            <a href="how-it-works.html">How It Works</a>
+            <p>Explore the C.A.R.E.S. process.</p>
         </div>
 
         <div class="card">
-            <h3><a href="emergency-types.html">Emergency Types</a></h3>
-            <p>Explore the different types of assistance C.A.R.E.S. could support.</p>
+            <a href="emergency-types.html">Emergency Types</a>
+            <p>Learn about the different assistance categories.</p>
         </div>
 
         <div class="card">
-            <h3><a href="rescue-map.html">Rescue Map</a></h3>
-            <p>Learn about the C.A.R.E.S. rescue-map concept.</p>
+            <a href="rescue-map.html">Rescue Map</a>
+            <p>Explore the rescue-map concept.</p>
         </div>
+
+    </div>
+
+
+    <div class="box">
+
+        <p>
+            <strong>Note:</strong>
+            C.A.R.E.S. is currently a student project and prototype
+            concept. It is not a real emergency service.
+        </p>
 
     </div>
 
 </main>
 
+
 <footer>
+
     C.A.R.E.S. Wiki — Student Project
+
 </footer>
+
 
 </body>
 </html>
